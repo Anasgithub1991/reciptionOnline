@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* global font system  */
+* {
+  font-family: 'Cairo',
+    sans-serif;
+}
+
+/* Datepicker */
+.red-border {
+  width: '100%'
+}
+
+.react-datepicker-ignore-onclickoutside {
+  width: 100% !important;
+}
+
+.react-datepicker__input-container input {
+  width: 100%;
+  border-radius: 6px;
+  border-color: rgb(209 213 219);
+  height: 100%;
+}
+
+
+.spinnerDiv {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 99999;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.captcha canvas{
+  border-radius: 5px;
+}
+
+.captcha a{
+  display: block ;
+  text-align: center;
+}
+
+@media print {
+  /* Basic reset for body when printing */
+  .print-grid{
+    grid-column:auto !important;
+  }
+  .print-header{
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 1.5rem /* 24px */ !important;
+  }
+  .print-title{
+    width: auto !important;
+    display: flex !important;
+    align-content: center !important;
+    grid-column: "span 1 / span 1" !important;
+    order: 1 !important;
+  }
+}
